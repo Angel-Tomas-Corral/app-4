@@ -1,0 +1,45 @@
+<br>
+<br><br><br>
+<div style="text-align: center;"><button class="btn btn-outline-success" (click)="volverHome()">volver</button></div>
+<br>
+<br>
+
+<form class="form-group flex-column">
+  
+    <div class="form-group col-md-3">
+  
+      <label for="nombre">Nombre: </label>
+      <input type="text" name="nombre" id="nombre" placeholder="nombre" class="form-control" [(ngModel)]="cuadroNombre">
+  
+    </div>
+  
+    <div class="form-group col-md-3">
+      
+      <label for="Apellido">Apellido: </label>
+      <input type="text" name="Apellido" id="Apellido" placeholder="Apellido" class="form-control" [(ngModel)]="cuadroApellido">
+  
+    </div>
+  
+    <div class="form-group col-md-3">
+      
+      <label for="Poder">Poder: </label>
+      <input type="text" name="Poder" id="Poder" placeholder="Poder" class="form-control" [(ngModel)]="cuadroPoder">
+  
+    </div>
+  
+    <div class="form-group col-md-3">
+      
+      <label for="Edad">Edad: </label>
+      <input type="text" name="Edad" id="Edad" placeholder="Edad" class="form-control" [(ngModel)]="cuadroEdad">
+  
+    </div>
+  
+  <div class="col mt-4">
+  
+    <button type="submit" class="btn btn-outline-success" (click)="agregar()" >Agreagar</button>
+  
+  </div>
+  
+  
+  </form>
+  
