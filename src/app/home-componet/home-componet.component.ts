@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PersonajesService } from '../personaje-servis.service';
 import { personaje } from '../personajes.model';
 import { ServicioService } from '../servicio.service';
 
@@ -10,7 +11,7 @@ import { ServicioService } from '../servicio.service';
 export class HomeComponetComponent implements OnInit {
   titulo = 'Lista de personajes';
 
-constructor(private miServicio:ServicioService){
+constructor(private miServicio:ServicioService, private traepersonajeService:PersonajesService ){
 
 }
   ngOnInit(): void {
@@ -26,8 +27,10 @@ personaje:personaje[]=[
 
  agregar(){
   let personajeEnviado= new personaje(this.cuadroNombre, this.cuadroApellido,this.cuadroPoder,this.cuadroEdad);
-  this.miServicio.mustraMensaje("Nombre de personaje: " + personajeEnviado.nombre)
+ // this.miServicio.mustraMensaje("Nombre de personaje: " + personajeEnviado.nombre)
+ //this.traepersonajeService.agregarPersonajeService(personaje:personaje)
   this.personaje.push(personajeEnviado);
+ 
  }
  
 

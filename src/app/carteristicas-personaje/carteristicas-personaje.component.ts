@@ -10,7 +10,7 @@ export class CarteristicasPersonajeComponent {
 
   agregaCaracteristicas(value: string){
 
-    this.carateristicasPersonaje.emit(value);
+    //this.carateristicasPersonaje.emit(value);
   }
 
 
