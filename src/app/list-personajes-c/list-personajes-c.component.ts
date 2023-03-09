@@ -1,6 +1,5 @@
-import { personaje } from './../personajes.model';
 import { Component, Input } from '@angular/core';
-import { NumberValueAccessor } from '@angular/forms';
+import { Personaje } from '../models/personajes.model';
 
 @Component({
   selector: 'app-list-personajes-c',
@@ -8,7 +7,7 @@ import { NumberValueAccessor } from '@angular/forms';
   styleUrls: ['./list-personajes-c.component.css']
 })
 export class ListPersonajesCComponent {
-@Input() personaje:personaje;
+@Input() personaje: Personaje;
 @Input() i:number;
 ArrayCaracteristica = [''];
   

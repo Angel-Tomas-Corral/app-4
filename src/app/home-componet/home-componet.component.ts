@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { PersonajesService } from '../personaje-servis.service';
-import { personaje } from '../personajes.model';
-import { ServicioService } from '../servicio.service';
+import { Personaje } from '../models/personajes.model';
+import { PersonajesService } from '../services/personaje-servis.service';
+import { ServicioService } from '../services/servicio.service';
 
 @Component({
   selector: 'app-home-componet',
@@ -11,22 +11,19 @@ import { ServicioService } from '../servicio.service';
 export class HomeComponetComponent implements OnInit {
   titulo = 'Lista de personajes';
 
-constructor(private miServicio:ServicioService, private traepersonajeService:PersonajesService ){
+constructor(private miServicio: ServicioService, private traepersonajeService: PersonajesService ){}
 
-}
-  ngOnInit(): void {
-    
-  }
+  ngOnInit(): void {}
 
-personaje:personaje[]=[
-  new personaje("goblin slayer","no tiene","ninguno",21),
-  new personaje("gordon","freman","traje de protecion",27),
-  new personaje("angel","corral","desconocido",20),
-  new personaje("alerbert","wesker","uroboros",30)
+personaje: Personaje[]=[
+  new Personaje("goblin slayer","no tiene","ninguno",21),
+  new Personaje("gordon","freman","traje de protecion",27),
+  new Personaje("angel","corral","desconocido",20),
+  new Personaje("alerbert","wesker","uroboros",30)
 ];
 
  agregar(){
-  let personajeEnviado= new personaje(this.cuadroNombre, this.cuadroApellido,this.cuadroPoder,this.cuadroEdad);
+  let personajeEnviado= new Personaje(this.cuadroNombre, this.cuadroApellido,this.cuadroPoder,this.cuadroEdad);
  // this.miServicio.mustraMensaje("Nombre de personaje: " + personajeEnviado.nombre)
  //this.traepersonajeService.agregarPersonajeService(personaje:personaje)
   this.personaje.push(personajeEnviado);

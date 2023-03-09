@@ -1,4 +1,3 @@
-import { ServicioService } from './servicio.service';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
@@ -9,6 +8,7 @@ import { ListPersonajesCComponent } from './list-personajes-c/list-personajes-c.
 import { CarteristicasPersonajeComponent } from './carteristicas-personaje/carteristicas-personaje.component';
 import { HomeComponetComponent } from './home-componet/home-componet.component';
 import { ArmaduraComponetComponent } from './armadura-componet/armadura-componet.component';
+import { ServicioService } from './services/servicio.service';
 
 
 

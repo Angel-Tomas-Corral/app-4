@@ -1,4 +1,4 @@
-export class personaje {
+export class Personaje {
     constructor(nombre:string, apellido:string, poder:string, edad:number){
         this.nombre=nombre;
         this.apellido=apellido;
