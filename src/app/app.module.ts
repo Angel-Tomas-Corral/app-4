@@ -9,6 +9,7 @@ import { CarteristicasPersonajeComponent } from './carteristicas-personaje/carte
 import { HomeComponetComponent } from './home-componet/home-componet.component';
 import { ArmaduraComponetComponent } from './armadura-componet/armadura-componet.component';
 import { ServicioService } from './services/servicio.service';
+import { PersonajesService } from './services/personaje-servis.service';
 
 
 
@@ -29,7 +30,7 @@ import { ServicioService } from './services/servicio.service';
     FormsModule
     
   ],
-  providers: [ServicioService],
+  providers: [ServicioService, PersonajesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

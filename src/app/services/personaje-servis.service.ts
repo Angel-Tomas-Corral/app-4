@@ -7,7 +7,7 @@ export class  PersonajesService{
 
 constructor(private servicoVentana: ServicioService){}
 
-    personaje:Personaje[]=[
+    arrPersonajes:Personaje[]=[
         new Personaje("goblin slayer","no tiene","ninguno",21),
         new Personaje("gordon","freman","traje de protecion",27),
         new Personaje("angel","corral","desconocido",20),
@@ -15,8 +15,11 @@ constructor(private servicoVentana: ServicioService){}
     ];
 
     agregarPersonajeService(personaje: Personaje){
-        this.servicoVentana.mustraMensaje("Personaje agregado: " + personaje.nombre)
-        this.personaje.push(personaje);
-        console.log("dasd")
+        this.arrPersonajes.push(personaje)
     }
 }
+       
+
+// this.servicoVentana.mustraMensaje("Personaje agregado: ")
+//         this.arrPersonajes.push(arrPersonajes);
+//         return this.arrPersonajes;

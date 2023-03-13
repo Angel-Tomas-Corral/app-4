@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ServicioService } from '../services/servicio.service';
 import { Personaje } from '../models/personajes.model';
+import { PersonajesService } from '../services/personaje-servis.service';
 
 @Component({
   selector: 'app-armadura-componet',
@@ -10,7 +11,7 @@ import { Personaje } from '../models/personajes.model';
 })
 export class ArmaduraComponetComponent implements OnInit {
   personaje:Personaje[]=[];
-  constructor(private router:Router, private miServicio:ServicioService){}
+  constructor(private router:Router, private miServicio:ServicioService, private traepersonajeService: PersonajesService){}
   
   ngOnInit(): void {}
 
@@ -21,12 +22,12 @@ export class ArmaduraComponetComponent implements OnInit {
 
   agregar(){
     let personajeEnviado= new Personaje(this.cuadroNombre, this.cuadroApellido,this.cuadroPoder,this.cuadroEdad);
+    this.traepersonajeService.agregarPersonajeService(personajeEnviado)
     this.miServicio.mustraMensaje("Nombre de personaje: " + personajeEnviado.nombre)
     this.personaje.push(personajeEnviado);
     this.router.navigate(['']);
    }
    
-  
   
   cuadroNombre:string="";
   cuadroApellido:string="";

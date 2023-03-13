@@ -34,7 +34,7 @@
   
   <div class="col mt-4">
   
-    <button type="submit" class="btn btn-outline-success" (click)="agregar()" >Agreagar</button>
+    <button type="submit" class="btn btn-outline-success" (click)="agregarPersonaje()" >Agregar</button>
   
   </div>
   
@@ -44,7 +44,7 @@
   
   <br>
    
-  <app-list-personajes-c *ngFor="let personaje of personaje; let i=index" [personaje]="personaje" [i]="i"></app-list-personajes-c>
+  <app-list-personajes-c *ngFor="let personaje of arrPersonajes; let i=index" [personaje]="personaje" [i]="i"></app-list-personajes-c>
   
   
   
