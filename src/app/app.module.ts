@@ -1,4 +1,5 @@
-import { NgModule } from '@angular/core';
+import { Router, Routes } from '@angular/router';
+import { NgModule, Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -10,11 +11,19 @@ import { HomeComponetComponent } from './home-componet/home-componet.component';
 import { ArmaduraComponetComponent } from './armadura-componet/armadura-componet.component';
 import { ServicioService } from './services/servicio.service';
 import { PersonajesService } from './services/personaje-servis.service';
+import { ActualizaComponetComponent } from './actualiza-componet/actualiza-componet.component';
 
 
 
 
 //armadura compnet es personajes agregados//
+
+const appRoutes:Routes=[  
+
+  {path:'', component: HomeComponetComponent},
+  {path:'12', component: ActualizaComponetComponent}
+
+];
 
 @NgModule({
   declarations: [
@@ -22,7 +31,8 @@ import { PersonajesService } from './services/personaje-servis.service';
     ListPersonajesCComponent,
     CarteristicasPersonajeComponent,
     HomeComponetComponent,
-    ArmaduraComponetComponent
+    ArmaduraComponetComponent,
+    ActualizaComponetComponent
   ],
   imports: [
     BrowserModule,
