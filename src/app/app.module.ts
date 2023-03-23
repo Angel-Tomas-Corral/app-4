@@ -18,12 +18,6 @@ import { ActualizaComponetComponent } from './actualiza-componet/actualiza-compo
 
 //armadura compnet es personajes agregados//
 
-const appRoutes:Routes=[  
-
-  {path:'', component: HomeComponetComponent},
-  {path:'12', component: ActualizaComponetComponent}
-
-];
 
 @NgModule({
   declarations: [
